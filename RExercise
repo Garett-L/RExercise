@@ -1,3 +1,8 @@
+Program name :RExercise_1
+Written by   :2130010001_厉睿豪_新工科
+Date         :2022.4.25
+Version      :1.0
+
 #练习1
 x <- c(1:1000)  # 给变量x分配从1到1000的数字向量。
 y <- atan(1/x)  #计算x的倒数的反正切值，然后将其分配给变量y。
