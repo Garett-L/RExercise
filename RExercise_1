@@ -14,7 +14,8 @@ identical(x, y) #用identical()比较x y，结果为FALSE
 
 all.equal(x, z)                 #用all.equal()比较x y的大小,结果为TRUE
 all.equal(x, z, tolerance = 1)  #结果为TRUE
-all.equal(x, z, tolerance = 0)  #如果参数tolerance为0，那么会输出两个数具体相差多少
+all.equal(x, z, tolerance = 0)  #如果参数tolerance为0，那么会返回Mean relative difference，即abs(x-y)/x
+#准确的说，只要tolerance的参数小于abs(x-y)/x，那么函数都会返回abs(x-y)/x
 
 #练习3
 true_and_missing <- c(TRUE, NA)
