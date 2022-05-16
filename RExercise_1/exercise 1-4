@@ -1,0 +1,41 @@
+#练习1
+x <- c(1:1000)  # 给变量x分配从1到1000的数字向量。
+y <- atan(1/x)  #计算x的倒数的反正切值，然后将其分配给变量y。
+z <- 1/tan(y)   #计算y的切线的倒数，然后把值赋给变量z
+
+#练习2
+x==y            # 用“==”比较x y，结果为FALSE
+identical(x, y) #用identical()比较x y，结果为FALSE
+
+all.equal(x, z)                 #用all.equal()比较x y的大小,结果为TRUE
+all.equal(x, z, tolerance = 1)  #结果为TRUE
+all.equal(x, z, tolerance = 0)  #如果参数tolerance为0，那么会输出两个数具体相差多少
+
+#练习3
+true_and_missing <- c(TRUE, NA)
+all(true_and_missing)             #结果为NA
+any(true_and_missing)             #结果为TRUE
+
+false_and_missing <- c(FALSE, NA)
+all(false_and_missing)            #结果为FALSE
+any(false_and_missing)            #结果为NA
+
+mixed <- c(TRUE, FALSE, NA)
+all(mixed)                        #结果为FALSE
+any(mixed)                        #结果为TRUE
+
+#练习4
+#生成一个带有100个大于50，小于1000的整数，求他们的加和，中位数，平均数及方差。
+xx <- sample(50:1000, 100)#用sample创建数字向量
+a <- sum(x)               #a是x内所有数字的和
+b <- median(x)            #b是x的中位数
+d <- mean(x)              #d是x的平均值
+e <- var(x)               #e是x的方差
+
+#一个圆的直径是1000的反正切，利用R，列出代码计算圆面积。
+S <- (atan(1000)/2)^2*pi      #结果为1.93542567763857
+
+#计算p1点(2,3) 到p2点(13,22)的欧氏距离，最后存在变量L中
+p1 <- c(2, 3)
+p2 <- c(13, 22)
+L <- sqrt((p2[1]-p1[1])^2+(p2[2]-p1[2])^2) #结果为21.9545984001001
