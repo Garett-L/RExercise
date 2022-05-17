@@ -32,7 +32,5 @@ colMeans(frame5_2)    #计算每列平均值
 new_beaver1 <- cbind(id=1, beaver1)
 new_beaver2 <- cbind(id=2, beaver2)
 all_beavers <- rbind(new_beaver1,new_beaver2)
-index5_3 <- all_beavers[,"activ"] %in% 1  #判断activ列是否值为1，并将结果组成一个逻辑性向量
-all_beavers[index5_3,]                    #将上一行得到的向量作为下标就能提取想要的行了
-#运行后的结果有点占空间就不展示了
-c(123,1) %in% 1
+subset(all_beavers, activ == 1)
+#运行后的结果有点占空间这里就不展示了
